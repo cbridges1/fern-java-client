@@ -20,6 +20,16 @@ public class FernJavaClientTests {
     void report() {
         var testPath = Paths.get("test-data");
         FernJavaClient.report(testPath.toAbsolutePath().toString());
-        Assertions.assertTrue(!testPath.toFile().exists());
+        Assertions.assertTrue(testPath.toFile().exists());
+    }
+
+    @Test
+    void goodTest() {
+        Assertions.assertTrue(true);
+    }
+
+    @Test
+    void whackTest() {
+        Assertions.assertTrue(false);
     }
 }
